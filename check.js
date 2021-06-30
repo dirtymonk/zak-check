@@ -15,3 +15,8 @@ function show(){
 function close(){
     mainMenu.style.top = '-100%';
 }
+
+window.addEventListener('scroll', function(){
+    var nav= this.document.querySelector('nav');
+    nav.classList.toggle('sticky', window.scrollY > 0);
+})
